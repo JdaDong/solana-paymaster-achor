@@ -1,8 +1,9 @@
 #!/bin/bash
+#
+#anchor clean && anchor build && anchor deploy --provider.cluster localnet
+#
 
-anchor clean && anchor build && solana program deploy ./target/deploy/paymaster.so --url localhost:8899
 
-
-
+anchor deploy --provider.cluster localnet &&  anchor test --skip-local-validator
 
 
